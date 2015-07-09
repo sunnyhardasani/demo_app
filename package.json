@@ -1,0 +1,19 @@
+{
+  "name" : "demo-app",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "caleydo_web": "*",
+    "caleydo_provenance": "*",
+    "caleydo_window": "*"
+  },
+  "caleydo": {
+    "plugins": {
+      "web": [
+        {
+          "type": "application",
+          "name": "Demo App"
+        }
+      ]
+    }
+  }
+}

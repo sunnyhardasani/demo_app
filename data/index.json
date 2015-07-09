@@ -1,0 +1,301 @@
+[
+  {
+    "name": "Test 10x10",
+    "path": "test_10x10.csv",
+    "type": "matrix",
+    "size": [10, 10],
+    "rowtype": "patient",
+    "coltype": "gene",
+    "value": {
+      "type": "real",
+      "range": [0, 1]
+    }
+  },
+  {
+    "name": "Test 100x10",
+    "path": "test_100x10.csv",
+    "size": [100, 10],
+    "type": "matrix",
+    "rowtype": "patient",
+    "coltype": "gene",
+    "value": {
+      "type": "real",
+      "range": [0, 1]
+    }
+  },
+  {
+    "name": "Test 10x100",
+    "path": "test_10x100.csv",
+    "size": [10, 100],
+    "type": "matrix",
+    "rowtype": "patient",
+    "coltype": "gene",
+    "value": {
+      "type": "real",
+      "range": [0, 1]
+    }
+  },
+  {
+    "name": "Test 10",
+    "path": "test_10.csv",
+    "size": 10,
+    "type": "vector",
+    "idtype": "patient",
+    "value": {
+      "type": "real",
+      "range": [0, 1]
+    }
+  },
+  {
+    "name": "Test Heterogeneous 10x4",
+    "path": "test_h10x4.csv",
+    "size": [10, 4],
+    "type": "table",
+    "idtype": "patient",
+    "columns": [
+      {
+        "name": "Gender",
+        "value" : {
+          "type": "categorical",
+          "categories": [
+            {
+              "name": "male",
+              "color": "blue"
+            },
+            {
+              "name": "female",
+              "color": "red"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Age",
+        "value" : {
+          "type": "int",
+          "range": [0, 100]
+        }
+      },
+      {
+        "name": "Value",
+        "value" : {
+          "type": "real",
+          "range": [0, 1]
+        }
+      }
+    ]
+  },
+  {
+    "name": "D1",
+    "path": "d1.csv",
+    "separator" : "\t",
+    "color" : "#1f77b4",
+    "bgColor" : "#aec7e8",
+    "size": [100, 20],
+    "type": "matrix",
+    "rowtype": "a",
+    "coltype": "b",
+    "value": {
+      "type": "real",
+      "range": [0, 1]
+    },
+    "ws" : "random"
+  },
+  {
+    "name": "D2",
+    "path": "d2.csv",
+    "separator" : "\t",
+    "color" : "#2ca02c",
+    "bgColor" : "#98df8a",
+    "size": [100, 20],
+    "type": "matrix",
+    "rowtype": "a",
+    "coltype": "b",
+    "value": {
+      "type": "real",
+      "range": [0, 1]
+    },
+    "ws" : "random"
+  },
+  {
+    "name": "D3",
+    "path": "d3.csv",
+    "separator" : "\t",
+    "color" : "#9467bd",
+    "bgColor" : "#c5b0d5",
+    "size": [100, 20],
+    "type": "matrix",
+    "rowtype": "a",
+    "coltype": "b",
+    "value": {
+      "type": "real",
+      "range": [0, 1]
+    },
+    "ws" : "random"
+  },
+  {
+    "name": "D1 Row KMeans 2",
+    "origin" : "D1",
+    "path": "d1.2.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 2,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D1 Row KMeans 3",
+    "origin" : "D1",
+    "path": "d1.3.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 3,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D1 Row KMeans 4",
+    "origin" : "D1",
+    "path": "d1.4.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 4,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D1 Row KMeans 5",
+    "origin" : "D1",
+    "path": "d1.5.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 5,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D2 Row KMeans 2",
+    "origin" : "D2",
+    "path": "d2.2.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 2,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D2 Row KMeans 3",
+    "origin" : "D2",
+    "path": "d2.3.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 3,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D2 Row KMeans 4",
+    "origin" : "D2",
+    "path": "d2.4.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 4,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D2 Row KMeans 5",
+    "origin" : "D2",
+    "path": "d2.5.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 5,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D3 Row KMeans 2",
+    "origin" : "D3",
+    "path": "d3.2.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 2,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D3 Row KMeans 3",
+    "origin" : "D3",
+    "path": "d3.3.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 3,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D3 Row KMeans 4",
+    "origin" : "D3",
+    "path": "d3.4.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 4,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D3 Row KMeans 5",
+    "origin" : "D3",
+    "path": "d3.5.csv",
+    "separator" : "\t",
+    "size": [100],
+    "ngroups" : 5,
+    "type": "stratification",
+    "idtype": "a",
+    "ws" : "random"
+  },
+  {
+    "name": "D1 Column KMeans 3",
+    "origin" : "D1",
+    "path": "d1t.3.csv",
+    "separator" : "\t",
+    "size": [20],
+    "ngroups" : 3,
+    "type": "stratification",
+    "idtype": "b",
+    "ws" : "random"
+  },
+  {
+    "name": "D2 Column KMeans 3",
+    "origin" : "D2",
+    "path": "d2t.3.csv",
+    "separator" : "\t",
+    "size": [20],
+    "ngroups" : 3,
+    "type": "stratification",
+    "idtype": "b",
+    "ws" : "random"
+  },
+  {
+    "name": "D3 Column KMeans 3",
+    "origin" : "D3",
+    "path": "d3t.3.csv",
+    "separator" : "\t",
+    "size": [20],
+    "ngroups" : 3,
+    "type": "stratification",
+    "idtype": "b",
+    "ws" : "random"
+  }
+]
