@@ -4,7 +4,8 @@
   "peerDependencies": {
     "caleydo_web": "*",
     "caleydo_provenance": "*",
-    "caleydo_window": "*"
+    "caleydo_window": "*",
+    "caledyo_vis": "*"
   },
   "caleydo": {
     "plugins": {
