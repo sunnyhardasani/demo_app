@@ -5,7 +5,7 @@
     "caleydo_web": "*",
     "caleydo_provenance": "*",
     "caleydo_window": "*",
-    "caledyo_vis": "*"
+    "caleydo_vis": "*"
   },
   "caleydo": {
     "plugins": {
