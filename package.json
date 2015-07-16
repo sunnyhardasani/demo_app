@@ -1,5 +1,5 @@
 {
-  "name" : "demo-app",
+  "name" : "demo_app",
   "version": "0.0.1",
   "peerDependencies": {
     "caleydo_web": "*",
@@ -16,5 +16,8 @@
         }
       ]
     }
+  },
+  "publishConfig": {
+    "registry": "http://dev.caleydo.org/nexus/content/repositories/caleydo-web/"
   }
 }
