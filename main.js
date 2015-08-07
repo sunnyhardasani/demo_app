@@ -13,7 +13,7 @@ function autoload(plugins, container) {
   return autoload;
 }
 
-require(['jquery', 'd3', '../caleydo_web/main', '../caleydo_web/data', '../caleydo_web/plugin', '../caleydo_window/main', '../caleydo_web/multiform', '../caleydo_web/idtype', '../caleydo_web/range', '../caleydo_provenance/selection', '../caleydo_web/vis', '../caleydo_provenance/multiform'], function ($, d3, C, data, plugins, window, multiform, idtypes, ranges, prov_sel, vis, prov_multi) {
+require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../caleydo_core/plugin', '../caleydo_window/main', '../caleydo_core/multiform', '../caleydo_core/idtype', '../caleydo_core/range', '../caleydo_provenance/selection', '../caleydo_core/vis', '../caleydo_provenance/multiform'], function ($, d3, C, data, plugins, window, multiform, idtypes, ranges, prov_sel, vis, prov_multi) {
   'use strict';
   var windows = $('<div>').css('position', 'absolute').appendTo('#main')[0];
   var singletons = autoload(plugins, $('#main')[0]);
