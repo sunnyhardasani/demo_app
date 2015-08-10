@@ -1,6 +1,8 @@
 {
   "name" : "demo_app",
   "version": "0.0.2",
+  "license" : "SEE LICENSE IN LICENSE",
+  "repository": "Caleydo/demo_app",
   "dependencies": {
   },
   "peerDependencies": {
