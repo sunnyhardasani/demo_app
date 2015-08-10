@@ -2,10 +2,6 @@
   "name" : "demo_app",
   "version": "0.0.2",
   "dependencies": {
-    "caleydo_core": "*",
-    "caleydo_provenance": "*",
-    "caleydo_window": "*",
-    "caleydo_vis": "*"
   },
   "peerDependencies": {
     "caleydo_core": "*",
