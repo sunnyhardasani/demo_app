@@ -95,7 +95,7 @@ require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cal
     }
   }
 
-  function addIt(m) {
+  function addIt(m, operation, pos) {
     var mw = window.createVisWindow(windows, {
       closeable: true,
       animatedHeader: true,
@@ -116,7 +116,7 @@ require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cal
     multiP.then(function (multi) {
       multiform.addIconVisChooser(mw.toolbar.node, multi);
       mw.attachVis(multi, multi.asMetaData);
-      mw.pos = [400, 50];
+      mw.pos = pos ? [ pos.x, pos.y ] : [400, 50];
       var vis = mw.adapter(multi);
       mw.on('removed', function () {
         removeLink(vis);
@@ -167,6 +167,7 @@ require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cal
     idtypes.restore(persisted.idtypes);
   }
 
+  databrowser.makeDropable(document.getElementById('main'), addIt);
 
   var b = d3.select(menu);
   b.append('span').text('Select Dataset: ');
