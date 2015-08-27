@@ -111,7 +111,7 @@ require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cal
         });
       });
     } else {
-      multiP = C.resolved(multiform.create(m, mw.node));
+      multiP = Promise.resolve(multiform.create(m, mw.node));
     }
     multiP.then(function (multi) {
       multiform.addIconVisChooser(mw.toolbar.node, multi);
