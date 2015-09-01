@@ -157,14 +157,13 @@ require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cal
     canvas.forEach(function (e) {
       e.mw.close();
     });
-    persisted.canvas.forEach(function (e) {
-      data.get(e.data).then(function (m) {
-        var r = addIt(m);
-        r.mw.restore(e.mw);
-        r.multi.restore(e.multi);
-      });
-    });
     idtypes.restore(persisted.idtypes);
+    return Promise.all(persisted.canvas.map(function (e) {
+      return data.get(e.data).then(function (m) {
+        var r = addIt(m);
+        return Promise.all([r.mw.restore(e.mw), r.multi.restore(e.multi)]);
+      });
+    }));
   }
 
   databrowser.makeDropable(document.getElementById('main'), addIt);
