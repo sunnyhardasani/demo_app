@@ -13,11 +13,13 @@ function autoload(plugins, container) {
   return autoload;
 }
 
-require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../caleydo_core/plugin', '../caleydo_window/main', '../caleydo_core/multiform', '../caleydo_core/idtype', '../caleydo_core/range', '../caleydo_provenance/selection', '../caleydo_core/vis', '../caleydo_provenance/multiform', '../caleydo_window/databrowser'], function ($, d3, C, data, plugins, window, multiform, idtypes, ranges, prov_sel, vis, prov_multi, databrowser) {
+define(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../caleydo_core/plugin', '../caleydo_window/main', '../caleydo_core/multiform', '../caleydo_core/idtype', '../caleydo_core/range', '../caleydo_provenance/selection', '../caleydo_core/vis', '../caleydo_provenance/multiform', '../caleydo_window/databrowser', '../wrapper_bootstrap_fontawesome/header'], function ($, d3, C, data, plugins, window, multiform, idtypes, ranges, prov_sel, vis, prov_multi, databrowser, header) {
   'use strict';
   var windows = $('<div>').css('position', 'absolute').appendTo('#main')[0];
   var singletons = autoload(plugins, $('#main')[0]);
-  var menu = $('<div>').css('position', 'fixed').prependTo('body')[0];
+  var appHeader = header.create(document.querySelector('body > div'), {
+    app: 'Demo App'
+  });
   /*var toolbar = new window.StaticToolBar($('#main')[0]);
   toolbar.builder.push(function (window, node) {
     multiform.addIconVisChooser(node, window.data('vis'));
@@ -168,83 +170,20 @@ require(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cal
 
   databrowser.makeDropable(document.getElementById('main'), addIt);
 
-  var b = d3.select(menu);
-  b.append('span').text('Select Dataset: ');
-  var $select = b.append('select').attr('class', 'dataselector');
-
-  b.append('button').text('Clear Selections').on('click', function () {
+  appHeader.addMainMenu('Clear Selections', function() {
     idtypes.clearSelection();
   });
   var persisted = [];
-  b.append('button').text('Persist').on('click', function () {
+  appHeader.addMainMenu('Persist', function() {
     var r = persist();
     console.log(JSON.stringify(r, null, ' '));
     persisted.push(r);
     $restore.attr('disabled', null);
   });
-  var $restore = b.append('button').text('Restore').attr('disabled', 'disabled').on('click', function () {
+  var $restore = d3.select(appHeader.addMainMenu('Restore', function() {
     if (persisted.length > 0) {
       restore(persisted.pop());
     }
     $restore.attr('disabled', persisted.length > 0 ? null : 'disable');
-  });
-
-
-  data.list().then(function (list) {
-    //for all inhomogeneous add them as extra columns, too
-    list = list.map(function (d) {
-      return {
-        key : d.desc.id,
-        value : d,
-        group : '_dataSets'
-      };
-    });
-    list.forEach(function (entry) {
-      if (entry.value.desc.type === 'table') {
-        list.push.apply(list, entry.value.cols().map(function (col) {
-          return {
-            group: entry.value.desc.name,
-            key: col.desc.name,
-            value: col
-          };
-        }));
-      }
-    });
-    list.unshift({group: '_dataSets'});
-    var nest = d3.nest().key(function (d) {
-      return d.group;
-    }).entries(list);
-    var $options = $select.selectAll('optgroup').data(nest);
-    $options.enter().append('optgroup').attr('label', function (d) {
-      return d.key;
-    }).each(function (d) {
-      var $op = d3.select(this).selectAll('option').data(d.values);
-      $op.enter().append('option').text(function (d) {
-        return d.value ? d.value.desc.name : '';
-      });
-    });
-    $select.on('change', function () {
-      var n = $select.node();
-      var i = n.selectedIndex;
-      if (i < 0) {
-        return;
-      }
-      var op = n.options[i];
-      var d = d3.select(op).data()[0];
-      if (d && d.value) {
-        addIt(d.value);
-      }
-      n.selectedIndex = 0;
-    });
-  });
+  }));
 });
-
-/*require(['jquery', './caleydo-data', './caleydo-plugins', './caleydo-multiform' ], function ($, data, plugins, multiform) {
- 'use strict';
- autoload(plugins);
-
- var $body = $('body');
- data.get('0').then(function (matrix) {
- var m = multiform.create(matrix, $body[0]);
- });
- });*/

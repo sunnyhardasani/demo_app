@@ -9,15 +9,29 @@ body, html {
   height: 100%;
 }
 
-#sidebar {
-  display: inline-block;
-  width: 20%;
+
+body > div.box {
+  display: flex;
+  align-items: stretch;
+  flex-flow: column;
   height: 100%;
 }
-main {
+
+body > div.box > div.content {
+  display: flex;
+  align-items: stretch;
+  flex: 1 1 auto;
+}
+
+#sidebar {
   display: inline-block;
-  width: 79%;
-  height: 100%;
+  width: 15%;
+}
+
+main {
+  position: relative;
+
+  flex: 1 1 auto;
 }
 
 .window.ui-widget-content {
