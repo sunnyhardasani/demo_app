@@ -13,7 +13,7 @@ function autoload(plugins, container) {
   return autoload;
 }
 
-define(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../caleydo_core/plugin', '../caleydo_window/main', '../caleydo_core/multiform', '../caleydo_core/idtype', '../caleydo_core/range', '../caleydo_provenance/selection', '../caleydo_core/vis', '../caleydo_provenance/multiform', '../caleydo_window/databrowser', '../wrapper_bootstrap_fontawesome/header'], function ($, d3, C, data, plugins, window, multiform, idtypes, ranges, prov_sel, vis, prov_multi, databrowser, header) {
+define(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../caleydo_core/plugin', '../caleydo_window/main', '../caleydo_core/multiform', '../caleydo_core/idtype', '../caleydo_core/range', '../caleydo_core/vis', '../caleydo_window/databrowser', '../wrapper_bootstrap_fontawesome/header'], function ($, d3, C, data, plugins, window, multiform, idtypes, ranges, vis, databrowser, header) {
   'use strict';
   var windows = $('<div>').css('position', 'absolute').appendTo('#main')[0];
   var singletons = autoload(plugins, $('#main')[0]);
@@ -25,24 +25,6 @@ define(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cale
     multiform.addIconVisChooser(node, window.data('vis'));
   })*/
   databrowser.create(document.getElementById('databrowser'));
-
-  var graph, graphvis;
-  data.create({
-    type: 'provenance_graph',
-    name: 'Demo App',
-    id: 'demo'
-  }).then(function (graph_) {
-    graph = graph_;
-    var s = prov_sel.create(graph_, 'selected');
-
-    canvas.forEach(function(entry) {
-      //prov_multi.attach(graph.addObject(entry.multi), graph);
-    });
-
-    vis.list(graph)[0].load().then(function (plugin) {
-      graphvis = plugin.factory(graph_, document.getElementById('provenancegraph'));
-    })
-  });
 
   var canvas = [];
   // use app here
