@@ -9,7 +9,8 @@
     "caleydo_core": "*",
     "caleydo_window": "*",
     "wrapper_bootstrap_fontawesome": "*",
-    "caleydo_vis": "*"
+    "caleydo_vis": "*",
+    "caleydo_d3": "*"
   },
   "caleydo": {
     "plugins": {
