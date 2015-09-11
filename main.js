@@ -116,9 +116,9 @@ define(['jquery', 'd3', '../caleydo_core/main', '../caleydo_core/data', '../cale
         mw: mw,
         multi: multi
       };
-      if (graph) {
+      //if (graph) {
         //prov_multi.attach(graph.addObject(entry.multi), graph);
-      }
+      //}
       canvas.push(entry);
       return entry;
     });
