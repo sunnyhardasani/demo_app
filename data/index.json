@@ -135,7 +135,7 @@
   },
   {
     "name": "D1 Row KMeans 2",
-    "origin" : "D1",
+    "origin" : "demo_app/D1",
     "path": "d1.2.csv",
     "separator" : "\t",
     "size": [100],
@@ -146,7 +146,7 @@
   },
   {
     "name": "D1 Row KMeans 3",
-    "origin" : "D1",
+    "origin" : "demo_app/D1",
     "path": "d1.3.csv",
     "separator" : "\t",
     "size": [100],
@@ -157,7 +157,7 @@
   },
   {
     "name": "D1 Row KMeans 4",
-    "origin" : "D1",
+    "origin" : "demo_app/D1",
     "path": "d1.4.csv",
     "separator" : "\t",
     "size": [100],
@@ -168,7 +168,7 @@
   },
   {
     "name": "D1 Row KMeans 5",
-    "origin" : "D1",
+    "origin" : "demo_app/D1",
     "path": "d1.5.csv",
     "separator" : "\t",
     "size": [100],
@@ -179,7 +179,7 @@
   },
   {
     "name": "D2 Row KMeans 2",
-    "origin" : "D2",
+    "origin" : "demo_app/D2",
     "path": "d2.2.csv",
     "separator" : "\t",
     "size": [100],
@@ -190,7 +190,7 @@
   },
   {
     "name": "D2 Row KMeans 3",
-    "origin" : "D2",
+    "origin" : "demo_app/D2",
     "path": "d2.3.csv",
     "separator" : "\t",
     "size": [100],
@@ -201,7 +201,7 @@
   },
   {
     "name": "D2 Row KMeans 4",
-    "origin" : "D2",
+    "origin" : "demo_app/D2",
     "path": "d2.4.csv",
     "separator" : "\t",
     "size": [100],
@@ -212,7 +212,7 @@
   },
   {
     "name": "D2 Row KMeans 5",
-    "origin" : "D2",
+    "origin" : "demo_app/D2",
     "path": "d2.5.csv",
     "separator" : "\t",
     "size": [100],
@@ -223,7 +223,7 @@
   },
   {
     "name": "D3 Row KMeans 2",
-    "origin" : "D3",
+    "origin" : "demo_app/D3",
     "path": "d3.2.csv",
     "separator" : "\t",
     "size": [100],
@@ -234,7 +234,7 @@
   },
   {
     "name": "D3 Row KMeans 3",
-    "origin" : "D3",
+    "origin" : "demo_app/D3",
     "path": "d3.3.csv",
     "separator" : "\t",
     "size": [100],
@@ -245,7 +245,7 @@
   },
   {
     "name": "D3 Row KMeans 4",
-    "origin" : "D3",
+    "origin" : "demo_app/D3",
     "path": "d3.4.csv",
     "separator" : "\t",
     "size": [100],
@@ -256,7 +256,7 @@
   },
   {
     "name": "D3 Row KMeans 5",
-    "origin" : "D3",
+    "origin" : "demo_app/D3",
     "path": "d3.5.csv",
     "separator" : "\t",
     "size": [100],
@@ -267,7 +267,7 @@
   },
   {
     "name": "D1 Column KMeans 3",
-    "origin" : "D1",
+    "origin" : "demo_app/D1",
     "path": "d1t.3.csv",
     "separator" : "\t",
     "size": [20],
@@ -278,7 +278,7 @@
   },
   {
     "name": "D2 Column KMeans 3",
-    "origin" : "D2",
+    "origin" : "demo_app/D2",
     "path": "d2t.3.csv",
     "separator" : "\t",
     "size": [20],
@@ -289,7 +289,7 @@
   },
   {
     "name": "D3 Column KMeans 3",
-    "origin" : "D3",
+    "origin" : "demo_app/D3",
     "path": "d3t.3.csv",
     "separator" : "\t",
     "size": [20],
